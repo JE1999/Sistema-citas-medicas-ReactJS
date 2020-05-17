@@ -1,0 +1,46 @@
+body{
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+/*LOGIN*/
+.landing-page{
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+  }
+  .landing-page::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./Images/bg-login.jpg) no-repeat;
+    background-size: cover;
+    opacity: .3;
+    animation: anim 100s linear infinite;
+}
+
+@keyframes anim {
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.page-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+/************/
