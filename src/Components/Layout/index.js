@@ -13,6 +13,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Button from '@material-ui/core/Button';
+import DashboardIcon from '@material-ui/icons/Dashboard';
 
 //Components
 import MyAppBar from './Components/AppBar'
@@ -107,12 +108,25 @@ export default function MiniDrawer({children}) {
       >
       <div className={classes.toolbar}/>
         <List>
-          {['Dashboard', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          
+          <ListItem button>
+            <ListItemIcon>
+              <DashboardIcon/>
+            </ListItemIcon>
+            <ListItemText>
+              Dashboard
+            </ListItemText>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemIcon>
+              <InboxIcon/>
+            </ListItemIcon>
+            <ListItemText>
+              Example
+            </ListItemText>
+          </ListItem>
+
         </List>
         <Divider />
         <List>
@@ -126,22 +140,22 @@ export default function MiniDrawer({children}) {
         <Divider/>
             {open 
                 ?
-                <Button 
-                    color="inherit"
-                    aria-label="close drawer"
-                    onClick={handleDrawerClose}
-                    edge="start"
+                <Button
+                  color="inherit"
+                  aria-label="close drawer"
+                  onClick={handleDrawerClose}
+                  edge="start"
                 >
-                    <ChevronLeftIcon />
+                  <ChevronLeftIcon />
                 </Button>
                 :
                 <Button
-                    color="inherit"
-                    aria-label="open drawer"
-                    onClick={handleDrawerOpen}
-                    edge="start"
+                  color="inherit"
+                  aria-label="open drawer"
+                  onClick={handleDrawerOpen}
+                  edge="start"
                 >
-                    <ChevronRightIcon />
+                  <ChevronRightIcon />
                 </Button>
             }
       </Drawer>

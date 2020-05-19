@@ -3,11 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
+import Button from '@material-ui/core/Button';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 const useStyles = makeStyles((theme) => ({
   appBar:{
@@ -19,6 +19,11 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+  },
+  button: {
+    margin: theme.spacing(1),
+    textTransform: 'none',
+    fontSize: '17px'
   },
 }));
 
@@ -43,10 +48,16 @@ export default function ButtonAppBar() {
             News
           </Typography>
 
-          <div>
-            <IconButton color="inherit" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
-                <AccountCircle/>
-            </IconButton>
+          <div className="row">
+            <Button 
+              color="inherit"
+              size="small"
+              className={classes.button}
+              onClick={handleClick}
+              endIcon={<ArrowDropDownIcon/>}
+            >
+              Fulano
+            </Button>
             <Menu
                 id="fade-menu"
                 anchorEl={anchorEl}

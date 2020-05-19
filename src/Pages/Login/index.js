@@ -4,6 +4,7 @@ import URLS from '../../Routes/Urls'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import LockOpenIcon from '@material-ui/icons/LockOpen';
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -32,8 +33,8 @@ export default function (){
         <div className="landing-page">
             <div className="container page-content">
                 <div className="row d-flex justify-content-center">
-                    <div className="col-11 col-sm-8 col-md-6 col-lg-4 my-5 px-3 py-4 bg-white shadow border">
-                        <h3 className="mb-4 text-center">Login</h3>
+                    <div className="col-11 col-sm-8 col-md-6 col-lg-4 my-5 px-3 pt-5 pb-3 rounded bg-white">
+                        <h2 className="mb-5 text-center">Login <LockOpenIcon/></h2>
                         <form
                             onSubmit={handleSubmit}
                         >
@@ -43,7 +44,7 @@ export default function (){
                                         fullWidth 
                                         id="outlined-basic" 
                                         label="Usuario" 
-                                        variant="outlined" 
+                                        variant="outlined"
                                         required
                                     />
                                 </div>
@@ -61,6 +62,7 @@ export default function (){
                             <Button 
                                 fullWidth 
                                 variant="contained" 
+                                size="large"
                                 className={classes.button}
                                 type="submit"
                             >
