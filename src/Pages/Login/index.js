@@ -42,7 +42,7 @@ export default function (){
                                 <div className="form-group col-12">
                                     <TextField 
                                         fullWidth 
-                                        id="outlined-basic" 
+                                        id="user" 
                                         label="Usuario" 
                                         variant="outlined"
                                         required
@@ -51,7 +51,7 @@ export default function (){
                                 <div className="form-group col-12">
                                     <TextField 
                                         fullWidth 
-                                        id="outlined-basic" 
+                                        id="password" 
                                         label="Contraseña" 
                                         variant="outlined" 
                                         type="password"
