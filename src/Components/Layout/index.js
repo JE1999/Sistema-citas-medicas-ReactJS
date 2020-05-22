@@ -71,7 +71,6 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
   },
 }));
 
@@ -160,8 +159,28 @@ export default function MiniDrawer({children}) {
             }
       </Drawer>
       <main className={classes.content}>
+     
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-12 p-0">
+              <div className="col-12 p-0" style={{height: "500px", position: "absolute"}}>
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{height: "100%", width: "100%"}}>
+                  <path d="M-30.76,141.61 C-23.98,49.83 -1.41,87.33 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style={{stroke: "none", fill: "#ee8572"}}></path></svg></div>
+            </div>
+          </div>
+        </div>
+
         <div className={classes.toolbar} />
-        {children}
+        <div className="opcd px-3">
+          {children}
+        </div>
+
+        <footer className="border-top bg-white mt-5">
+          <div className="footer-copyright text-center py-3">
+            <h6 className="m-0">© 2020 Copyright: <span className="text-app">Fulano</span></h6>
+          </div>
+        </footer>
+
       </main>
     </div>
   );

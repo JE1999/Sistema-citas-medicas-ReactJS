@@ -12,7 +12,7 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 const useStyles = makeStyles((theme) => ({
   appBar:{
       zIndex: 1300,
-      background: '#0f4c75'
+      background: '#ee8572',
   },
   menuButton: {
     marginRight: theme.spacing(2),

@@ -8,10 +8,10 @@ import LockOpenIcon from '@material-ui/icons/LockOpen';
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    background: '#0f4c75',
+    background: '#ee8572',
     color: '#fff',
     "&:hover": {
-        backgroundColor: "#0f4c85"
+        backgroundColor: "#ee8572"
     }
   },
 }));
@@ -33,10 +33,12 @@ export default function (){
         <div className="landing-page">
             <div className="container page-content">
                 <div className="row d-flex justify-content-center">
-                    <div className="col-11 col-sm-8 col-md-6 col-lg-4 my-5 px-3 pt-5 pb-3 rounded bg-white">
-                        <h2 className="mb-5 text-center">Login <LockOpenIcon/></h2>
+                    <div className="col-11 col-sm-8 col-md-6 col-lg-4 my-5 p-0 rounded bg-white opcd">
+                        <div className="col-12 p-0" style={{height: "250px", position: "absolute"}} ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{height: "100%", width: "100%"}}><path d="M-30.76,141.61 C-23.98,49.83 -1.41,87.33 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style={{stroke: "none", fill: "#ee8572"}}></path></svg></div>
+                        <h2 className="mb-5 mt-5 text-center text-white" style={{position: "relative"}}>Login <LockOpenIcon/></h2>
                         <form
                             onSubmit={handleSubmit}
+                            className="p-3"
                         >
                             <div className="form-row">
                                 <div className="form-group col-12">

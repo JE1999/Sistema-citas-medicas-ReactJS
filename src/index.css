@@ -2,14 +2,26 @@ body{
     font-family: 'Josefin Sans', sans-serif !important;
 }
 
-.text-app{color: #0f4c75 !important;} .bg-app{background: #0f4c75 !important;}
+/*GLOBAL*/
+.text-app{color: #ee8572 !important;} .bg-app{background: #ee8572 !important;}
 
-.shadow-app{
+.rounded-app{
     border-radius: 15px !important;
-    background: #ffffff;
-    box-shadow:  1.5px 6px 19px #8f8f8f, 
-    -6px -6px 19px #ffffff;
 }
+
+.opcd{
+    animation: 1s opcd alternate;
+}
+
+@keyframes opcd {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/***************************/
 
 /*LOGIN*/
 .landing-page{
