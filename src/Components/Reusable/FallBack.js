@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles(theme => ({
   backdrop: {
     background: 'white',
-    color: '#0f4c75'
+    color: '#ee8572'
   }
 }));
 

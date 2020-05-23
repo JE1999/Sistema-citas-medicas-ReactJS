@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -10,13 +11,19 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import Button from '@material-ui/core/Button';
 import DashboardIcon from '@material-ui/icons/Dashboard';
+import RecentActorsIcon from '@material-ui/icons/RecentActors';
+import GroupIcon from '@material-ui/icons/Group';
+import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import GroupWorkIcon from '@material-ui/icons/GroupWork';
+import ListAltIcon from '@material-ui/icons/ListAlt';
+import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 
 //Components
 import MyAppBar from './Components/AppBar'
+import ListCollapseReport from './Components/ListCollapseReport'
+import Urls from '../../Routes/Urls';
 
 const drawerWidth = 240;
 
@@ -108,35 +115,88 @@ export default function MiniDrawer({children}) {
       <div className={classes.toolbar}/>
         <List>
           
-          <ListItem button>
-            <ListItemIcon>
-              <DashboardIcon/>
-            </ListItemIcon>
-            <ListItemText>
-              Dashboard
-            </ListItemText>
-          </ListItem>
-
-          <ListItem button>
-            <ListItemIcon>
-              <InboxIcon/>
-            </ListItemIcon>
-            <ListItemText>
-              Example
-            </ListItemText>
-          </ListItem>
-
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+          <NavLink 
+            to={Urls.Dashboard}
+            activeClassName="active"
+          >
+            <ListItem button>
+              <ListItemIcon>
+                <DashboardIcon />
+              </ListItemIcon>
+              <ListItemText>
+                Dashboard
+              </ListItemText>
             </ListItem>
-          ))}
+          </NavLink>
+
+          <ListItem button>
+            <ListItemIcon>
+              <ListAltIcon/>
+            </ListItemIcon>
+            <ListItemText>
+              Citas
+            </ListItemText>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemIcon>
+              <RecentActorsIcon/>
+            </ListItemIcon>
+            <ListItemText>
+              Médicos
+            </ListItemText>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemIcon>
+              <GroupIcon/>
+            </ListItemIcon>
+            <ListItemText>
+              Pacientes
+            </ListItemText>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemIcon>
+              <LocalHospitalIcon/>
+            </ListItemIcon>
+            <ListItemText>
+              Consultorios
+            </ListItemText>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemIcon>
+              <GroupWorkIcon/>
+            </ListItemIcon>
+            <ListItemText>
+              Especialidades
+            </ListItemText>
+          </ListItem>
+
         </List>
+
+        <Divider />
+
+        <ListCollapseReport/>
+
         <Divider/>
+
+        <List>
+
+          <ListItem button>
+              <ListItemIcon>
+                <SupervisedUserCircleIcon/>
+              </ListItemIcon>
+              <ListItemText>
+                Usuarios
+              </ListItemText>
+            </ListItem>
+
+          </List>
+
+        <Divider/>
+
             {open 
                 ?
                 <Button
@@ -177,7 +237,7 @@ export default function MiniDrawer({children}) {
 
         <footer className="border-top bg-white mt-5">
           <div className="footer-copyright text-center py-3">
-            <h6 className="m-0">© 2020 Copyright: <span className="text-app">Fulano</span></h6>
+            <h6 className="m-0">© 2020 Copyright: <span className="text-app">Skarlin</span></h6>
           </div>
         </footer>
 

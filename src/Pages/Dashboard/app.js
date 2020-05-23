@@ -1,8 +1,9 @@
 import React from 'react'
 import EventNoteIcon from '@material-ui/icons/EventNote';
 
-//Chart
+//Components
 import ChartOne from './Components/ChartOne'
+import Table from './Components/Table'
 
 export default function (){
 
@@ -42,11 +43,11 @@ export default function (){
                         </div>
                     </div>
 
-                    <div className="col-8 m-2 mt-5 bg-white shadow rounded-app">
+                    <div className="col-11 col-md-11 col-lg-8 m-2 mt-5 bg-white shadow rounded-app">
                         <ChartOne/>
                     </div>
 
-                    <div className="col-3 m-2 mt-5">
+                    <div className="col-11 col-md-11 col-lg-3 m-2 mt-5">
                         <ul className="list-group shadow rounded-app">
                             <li className="list-group-item d-flex justify-content-between align-items-center">
                                 Cras justo odio
@@ -73,6 +74,10 @@ export default function (){
                                 <span className="badge badge-primary badge-pill">1</span>
                             </li>
                         </ul>
+                    </div>
+
+                    <div className="col-11 m-2 p-0 mt-5 bg-white shadow rounded-app">
+                        <Table/>
                     </div>
 
                 </div>

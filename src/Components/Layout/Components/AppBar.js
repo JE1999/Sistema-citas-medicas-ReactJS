@@ -9,6 +9,9 @@ import Fade from '@material-ui/core/Fade';
 import Button from '@material-ui/core/Button';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
+//Logo
+import LOGO from '../../../Images/logo.png'
+
 const useStyles = makeStyles((theme) => ({
   appBar:{
       zIndex: 1300,
@@ -45,7 +48,7 @@ export default function ButtonAppBar() {
       <AppBar className={classes.appBar} position="fixed">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            News
+            <img width="75" src={LOGO} alt="Logo de la app" />
           </Typography>
 
           <div className="row">
@@ -56,7 +59,7 @@ export default function ButtonAppBar() {
               onClick={handleClick}
               endIcon={<ArrowDropDownIcon/>}
             >
-              Fulano
+              Skarlin V.
             </Button>
             <Menu
                 id="fade-menu"
@@ -66,9 +69,8 @@ export default function ButtonAppBar() {
                 onClose={handleClose}
                 TransitionComponent={Fade}
             >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <MenuItem onClick={handleClose}>Perfil</MenuItem>
+                <MenuItem onClick={handleClose}>Cerrar sesión</MenuItem>
             </Menu>
         </div>
 

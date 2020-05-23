@@ -62,7 +62,7 @@ export default function (){
           },
           animation: {
             easing: 'easeOutQuart',
-            duration: '5000'
+            duration: '3000'
           },
           scales: {
             yAxes: [{

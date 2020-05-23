@@ -13,6 +13,8 @@ body{
     animation: 1s opcd alternate;
 }
 
+.active{color: #ee8572 !important;}.active:hover{text-decoration: none;}
+
 @keyframes opcd {
     from{
         opacity: 0;
