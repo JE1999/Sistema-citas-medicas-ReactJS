@@ -2,6 +2,8 @@ export default{
 
     Login : '/',
 
+    Profile : '/Profile',
+
     Dashboard : '/Dashboard',
 
     Quotes : '/Quotes',

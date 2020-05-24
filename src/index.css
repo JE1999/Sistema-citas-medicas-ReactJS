@@ -21,7 +21,6 @@ body{
 a{color: #505050 !important;}a:hover{text-decoration: none !important;}
 
 .z-index-app{z-index: -1;}
-h1, h2, h3, h4, h5, h6{margin: 0 !important;}
 
 @keyframes opcd {
     from{
@@ -32,6 +31,16 @@ h1, h2, h3, h4, h5, h6{margin: 0 !important;}
     }
 }
 /***************************/
+
+/*APP BAR*/
+.status{
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	display: inline-block;
+    margin-right: 5px;
+    background: rgb(4, 173, 4);
+}
 
 /*LOGIN*/
 .landing-page{

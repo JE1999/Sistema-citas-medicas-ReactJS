@@ -224,7 +224,7 @@ export default function MiniDrawer({children}) {
         <div className="z-index-app" style={{position: "relative", width: "100%"}}>
           <div className="container-fluid p-0" style={{position: "absolute"}}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 320">
-              <path fill="#ee8572" fill-opacity="1" d="M0,320L120,298.7C240,277,480,235,720,208C960,181,1200,171,1320,165.3L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
+              <path fill="#ee8572" fillOpacity="1" d="M0,320L120,298.7C240,277,480,235,720,208C960,181,1200,171,1320,165.3L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
             </svg>
           </div>
         </div>

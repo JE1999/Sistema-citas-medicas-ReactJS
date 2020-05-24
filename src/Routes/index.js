@@ -8,13 +8,16 @@ import ScrollTop from './ScrollTop'
 import URLS from './Urls'
 
 /* LAZY COMPONENTS */
-//LOGIN
+//Login
 const Login = lazy(() => import('../Pages/Login'))
 
-//DASHBOARD
+//Profile
+const Profile = lazy(() => import('../Pages/Profile'))
+
+//Dashboard
 const Dashboard = lazy(() => import('../Pages/Dashboard'))
 
-//QUOTES
+//Quotes
 const Quotes = lazy(() => import('../Pages/Quotes'))
 const QuotesCreate = lazy(() => import('../Pages/Quotes/Views/Create'))
 const QuotesEdit = lazy(() => import('../Pages/Quotes/Views/Edit'))
@@ -25,13 +28,16 @@ export default function (){
         <Switch>
             <ScrollTop>
 
-                {/* LOGIN */}
+                {/* Login */}
                 <Route exact path={URLS.Login} component={Login} />
 
-                {/* DASHBOARD */}
+                {/* Profile */}
+                <Route exact path={URLS.Profile} component={Profile} />
+
+                {/* Dashboard */}
                 <Route exact path={URLS.Dashboard} component={Dashboard} />
 
-                {/* QUOTES */}
+                {/* Quotes */}
                 <Route exact path={URLS.Quotes} component={Quotes} />
                 <Route exact path={URLS.QuotesCreate} component={QuotesCreate} />
                 <Route exact path={`${URLS.QuotesEdit}/:id`} component={QuotesEdit} />

@@ -1,4 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+//Components
+import Urls from '../../../Routes/Urls';
+
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -11,6 +16,9 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 //Logo
 import LOGO from '../../../Images/logo.png'
+
+//Modal Logout
+import ModalLogout from './Logout'
 
 const useStyles = makeStyles((theme) => ({
   appBar:{
@@ -44,11 +52,19 @@ export default function ButtonAppBar() {
     setAnchorEl(null);
   };
 
+  const [ modal, setModal ] = useState(false)
+
+  const handleModal = () =>{
+    setModal(!modal)
+  }
+
   return (
       <AppBar className={classes.appBar} position="fixed">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            <img width="75" src={LOGO} alt="Logo de la app" />
+            <Link to={Urls.Dashboard}>
+              <img width="75" src={LOGO} alt="Logo de la app" />
+            </Link>
           </Typography>
 
           <div className="row">
@@ -59,7 +75,7 @@ export default function ButtonAppBar() {
               onClick={handleClick}
               endIcon={<ArrowDropDownIcon/>}
             >
-              Skarlin V.
+              <span className="status"></span>Skarlin V.
             </Button>
             <Menu
                 id="fade-menu"
@@ -69,8 +85,13 @@ export default function ButtonAppBar() {
                 onClose={handleClose}
                 TransitionComponent={Fade}
             >
-                <MenuItem onClick={handleClose}>Perfil</MenuItem>
-                <MenuItem onClick={handleClose}>Cerrar sesión</MenuItem>
+                <Link to={Urls.Profile}>
+                  <MenuItem onClick={handleClose}>Perfil</MenuItem>
+                </Link>
+                <MenuItem onClick={handleModal}>
+                  Cerrar sesión
+                  {modal && <ModalLogout/>}
+                </MenuItem>
             </Menu>
         </div>
 

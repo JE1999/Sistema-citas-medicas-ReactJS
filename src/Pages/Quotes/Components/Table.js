@@ -27,7 +27,7 @@ export default function () {
     const btnOpcions = () =>{
         return(
             <div>
-                <Button aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
+                <Button className="border rounded shadow-sm" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
                     <MoreVertIcon/>
                 </Button>
                 <Menu
@@ -38,7 +38,9 @@ export default function () {
                     onClose={handleClose}
                     TransitionComponent={Fade}
                 >
-                    <MenuItem onClick={handleClose}><Link to={Urls.QuotesEdit + '/1'}>Editar</Link></MenuItem>
+                    <Link to={Urls.QuotesEdit + '/1'}>
+                        <MenuItem onClick={handleClose}>Editar</MenuItem>
+                    </Link>
                     <MenuItem onClick={handleClose}>Borrar</MenuItem>
                 </Menu>
             </div>
@@ -46,9 +48,9 @@ export default function () {
     }
 
     return(
-        <div className="table-responsive bg-white px-1 shadow rounded-app">
-            <table class="table m-0">
-                <caption>Lista de citas</caption>
+        <div className="table-responsive bg-white shadow rounded-app">
+            <table className="table table-hover m-0">
+                <caption className="ml-2">Lista de citas</caption>
                 <thead>
                     <tr>
                         <th>#</th>

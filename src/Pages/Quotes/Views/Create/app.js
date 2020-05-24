@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 //Components
@@ -11,10 +11,22 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 
 export default function (){
 
+    const [ dataSend, setDataSend ] = useState({})
+
+    const handleChange = e =>{
+        setDataSend({
+            ...dataSend,
+            [e.target.name] : e.target.value
+        })
+    }
+
     const handleSubmit = e =>{
         e.preventDefault()
         
         alert("Aun no me han dado funcionabilidad, Sorry :(")
+
+        console.log(dataSend)
+
     }
 
     return(
@@ -54,6 +66,8 @@ export default function (){
                                 required
                                 variant="outlined" 
                                 size="small"
+                                name="fecha"
+                                onChange={handleChange}
                             />
                         </div>
 
@@ -68,6 +82,8 @@ export default function (){
                                 required
                                 variant="outlined" 
                                 size="small"
+                                name="hora"
+                                onChange={handleChange}
                             />
                         </div>
 
@@ -77,7 +93,8 @@ export default function (){
                                 id="combo-box-demo"
                                 options={top100Films}
                                 getOptionLabel={(option) => option.title}
-                                renderInput={(params) => <TextField {...params} label="Paciente"  variant="outlined" size="small" required />}
+                                onChange={(e,v) => setDataSend({...dataSend, paciente : v.title})}
+                                renderInput={(params) => <TextField {...params} label="Paciente" variant="outlined" size="small" required />}
                             />
                         </div>
 
@@ -87,6 +104,7 @@ export default function (){
                                 id="combo-box-demo"
                                 options={top100Films}
                                 getOptionLabel={(option) => option.title}
+                                onChange={(e,v) => setDataSend({...dataSend, medico : v.title})}
                                 renderInput={(params) => <TextField {...params} label="Médico" variant="outlined" size="small" required />}
                             />
                         </div>
@@ -97,6 +115,7 @@ export default function (){
                                 id="combo-box-demo"
                                 options={top100Films}
                                 getOptionLabel={(option) => option.title}
+                                onChange={(e,v) => setDataSend({...dataSend, consultorio : v.title})}
                                 renderInput={(params) => <TextField {...params} label="Consultorio" variant="outlined" size="small" required />}
                             />
                         </div>
@@ -107,10 +126,12 @@ export default function (){
                                 label="Observación" 
                                 type="text"
                                 multiline
-                                rows={4}
+                                rows={2}
                                 required
                                 variant="outlined" 
                                 size="small"
+                                name="observacion"
+                                onChange={handleChange}
                             />
                         </div>
 

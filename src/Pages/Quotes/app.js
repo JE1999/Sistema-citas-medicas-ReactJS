@@ -27,7 +27,7 @@ export default function (){
 
                     <div className="col-md-4 text-center">
                         <Tooltip title="Imprimir">
-                            <IconButton onClick={print} className="shadow" aria-label="Imprimir">
+                            <IconButton onClick={print} className="shadow bg-app" aria-label="Imprimir">
                                 <PrintIcon className="text-white" />
                             </IconButton>
                         </Tooltip>
