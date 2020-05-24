@@ -36,7 +36,7 @@ export default function (){
         <div className="landing-page">
             <div className="container page-content">
                 <div className="row d-flex justify-content-center">
-                    <div className="col-11 col-sm-8 col-md-6 col-lg-4 my-5 p-0 rounded bg-white opcd">
+                    <div className="col-11 col-sm-8 col-md-6 my-5 p-0 rounded bg-white opcd">
                         <div className="col-12 p-0" style={{height: "250px", position: "absolute"}} ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{height: "100%", width: "100%"}}><path d="M-30.76,141.61 C-23.98,49.83 -1.41,87.33 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style={{stroke: "none", fill: "#ee8572"}}></path></svg></div>
                         <div className="my-5 text-center text-white" style={{position: "relative"}}>
                             <img width="200" src={LOGO} alt="Logo de la app" />
