@@ -10,10 +10,18 @@ body{
 }
 
 .opcd{
-    animation: 1s opcd alternate;
+    animation: .5s opcd alternate;
+    z-index: 1000 !important;
 }
 
 .active{color: #ee8572 !important;}.active:hover{text-decoration: none;}
+
+.btn-app{background: #ee8572 !important; color: white !important;}
+
+a{color: #505050 !important;}a:hover{text-decoration: none !important;}
+
+.z-index-app{z-index: -1;}
+h1, h2, h3, h4, h5, h6{margin: 0 !important;}
 
 @keyframes opcd {
     from{
@@ -67,3 +75,9 @@ body{
     box-sizing: border-box;
 }
 /************/
+
+/*IMPRIMIR*/
+/* @media print { 
+    .no-printme  { display: none !important;}
+    .printme  { display: block !important;}
+} */

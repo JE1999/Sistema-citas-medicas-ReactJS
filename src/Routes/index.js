@@ -9,10 +9,15 @@ import URLS from './Urls'
 
 /* LAZY COMPONENTS */
 //LOGIN
-const Login = lazy(() => import('../Pages/Login/index'))
+const Login = lazy(() => import('../Pages/Login'))
 
 //DASHBOARD
-const Dashboard = lazy(() => import('../Pages/Dashboard/index'))
+const Dashboard = lazy(() => import('../Pages/Dashboard'))
+
+//QUOTES
+const Quotes = lazy(() => import('../Pages/Quotes'))
+const QuotesCreate = lazy(() => import('../Pages/Quotes/Views/Create'))
+const QuotesEdit = lazy(() => import('../Pages/Quotes/Views/Edit'))
 
 export default function (){
 
@@ -25,6 +30,11 @@ export default function (){
 
                 {/* DASHBOARD */}
                 <Route exact path={URLS.Dashboard} component={Dashboard} />
+
+                {/* QUOTES */}
+                <Route exact path={URLS.Quotes} component={Quotes} />
+                <Route exact path={URLS.QuotesCreate} component={QuotesCreate} />
+                <Route exact path={`${URLS.QuotesEdit}/:id`} component={QuotesEdit} />
             
             </ScrollTop>
         </Switch>

@@ -22,7 +22,7 @@ import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 
 //Components
 import MyAppBar from './Components/AppBar'
-import ListCollapseReport from './Components/ListCollapseReport'
+// import ListCollapseReport from './Components/ListCollapseReport'
 import Urls from '../../Routes/Urls';
 
 const drawerWidth = 240;
@@ -128,15 +128,20 @@ export default function MiniDrawer({children}) {
               </ListItemText>
             </ListItem>
           </NavLink>
-
-          <ListItem button>
-            <ListItemIcon>
-              <ListAltIcon/>
-            </ListItemIcon>
-            <ListItemText>
-              Citas
-            </ListItemText>
-          </ListItem>
+          
+          <NavLink 
+            to={Urls.Quotes}
+            activeClassName="active"
+          >
+            <ListItem button>
+              <ListItemIcon>
+                <ListAltIcon/>
+              </ListItemIcon>
+              <ListItemText>
+                Citas
+              </ListItemText>
+            </ListItem>
+          </NavLink>
 
           <ListItem button>
             <ListItemIcon>
@@ -178,10 +183,6 @@ export default function MiniDrawer({children}) {
 
         <Divider />
 
-        <ListCollapseReport/>
-
-        <Divider/>
-
         <List>
 
           <ListItem button>
@@ -219,19 +220,18 @@ export default function MiniDrawer({children}) {
             }
       </Drawer>
       <main className={classes.content}>
-     
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-12 p-0">
-              <div className="col-12 p-0" style={{height: "500px", position: "absolute"}}>
-                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{height: "100%", width: "100%"}}>
-                  <path d="M-30.76,141.61 C-23.98,49.83 -1.41,87.33 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style={{stroke: "none", fill: "#ee8572"}}></path></svg></div>
-            </div>
+    
+        <div className="z-index-app" style={{position: "relative", width: "100%"}}>
+          <div className="container-fluid p-0" style={{position: "absolute"}}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 320">
+              <path fill="#ee8572" fill-opacity="1" d="M0,320L120,298.7C240,277,480,235,720,208C960,181,1200,171,1320,165.3L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
+            </svg>
           </div>
         </div>
 
         <div className={classes.toolbar} />
-        <div className="opcd px-3">
+
+        <div className="opcd px-3 mt-3">
           {children}
         </div>
 

@@ -2,6 +2,10 @@ export default{
 
     Login : '/',
 
-    Dashboard : '/Dashboard'
+    Dashboard : '/Dashboard',
+
+    Quotes : '/Quotes',
+    QuotesCreate : '/Quotes/Create',
+    QuotesEdit : '/Quotes/Edit',
 
 }

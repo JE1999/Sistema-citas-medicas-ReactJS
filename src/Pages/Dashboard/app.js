@@ -12,7 +12,7 @@ export default function (){
             <div className="container-fluid">
                 <div className="row d-flex justify-content-between">
 
-                    <div className="col-12 col-md-5 col-lg-4 col-xl-3 m-2 mt-5 bg-white shadow rounded-app">
+                    <div className="col-12 col-md-5 col-lg-4 col-xl-3 m-2 mt-2 bg-white shadow rounded-app">
                         <div className="row d-flex align-items-center">
                             <div className="col-4 text-center"><EventNoteIcon className="text-app" fontSize="large"/></div>
                             <div className="col-8 text-center">
@@ -22,7 +22,7 @@ export default function (){
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-5 col-lg-4 col-xl-3 m-2 mt-5 bg-white shadow rounded-app">
+                    <div className="col-12 col-md-5 col-lg-4 col-xl-3 m-2 mt-2 bg-white shadow rounded-app">
                         <div className="row d-flex align-items-center">
                             <div className="col-4 text-center"><EventNoteIcon className="text-app" fontSize="large"/></div>
                             <div className="col-8 text-center">
@@ -32,7 +32,7 @@ export default function (){
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-5 col-lg-4 col-xl-3 m-2 mt-5 bg-white shadow rounded-app">
+                    <div className="col-12 col-md-5 col-lg-4 col-xl-3 m-2 mt-2 bg-white shadow rounded-app">
                         <div className="row d-flex align-items-center">
                             <div className="col-4 text-center"><EventNoteIcon className="text-app" fontSize="large"/></div>
                             <div className="col-8 text-center">
