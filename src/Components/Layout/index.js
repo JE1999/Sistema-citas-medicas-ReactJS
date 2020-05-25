@@ -143,41 +143,61 @@ export default function MiniDrawer({children}) {
             </ListItem>
           </NavLink>
 
-          <ListItem button>
-            <ListItemIcon>
-              <RecentActorsIcon/>
-            </ListItemIcon>
-            <ListItemText>
-              Médicos
-            </ListItemText>
-          </ListItem>
+          <NavLink 
+            to={Urls.Medical}
+            activeClassName="active"
+          >
+            <ListItem button>
+              <ListItemIcon>
+                <RecentActorsIcon/>
+              </ListItemIcon>
+              <ListItemText>
+                Médicos
+              </ListItemText>
+            </ListItem>
+          </NavLink>
 
-          <ListItem button>
-            <ListItemIcon>
-              <GroupIcon/>
-            </ListItemIcon>
-            <ListItemText>
-              Pacientes
-            </ListItemText>
-          </ListItem>
+          <NavLink 
+            to={Urls.Patiens}
+            activeClassName="active"
+          >
+            <ListItem button>
+              <ListItemIcon>
+                <GroupIcon/>
+              </ListItemIcon>
+              <ListItemText>
+                Pacientes
+              </ListItemText>
+            </ListItem>
+          </NavLink>
 
-          <ListItem button>
-            <ListItemIcon>
-              <LocalHospitalIcon/>
-            </ListItemIcon>
-            <ListItemText>
-              Consultorios
-            </ListItemText>
-          </ListItem>
+          <NavLink 
+            to={Urls.Offices}
+            activeClassName="active"
+          >
+            <ListItem button>
+              <ListItemIcon>
+                <LocalHospitalIcon/>
+              </ListItemIcon>
+              <ListItemText>
+                Consultorios
+              </ListItemText>
+            </ListItem>
+          </NavLink>
 
-          <ListItem button>
-            <ListItemIcon>
-              <GroupWorkIcon/>
-            </ListItemIcon>
-            <ListItemText>
-              Especialidades
-            </ListItemText>
-          </ListItem>
+          <NavLink 
+            to={Urls.Specialties}
+            activeClassName="active"
+          >
+            <ListItem button>
+              <ListItemIcon>
+                <GroupWorkIcon/>
+              </ListItemIcon>
+              <ListItemText>
+                Especialidades
+              </ListItemText>
+            </ListItem>
+          </NavLink>
 
         </List>
 
@@ -185,14 +205,19 @@ export default function MiniDrawer({children}) {
 
         <List>
 
-          <ListItem button>
-              <ListItemIcon>
-                <SupervisedUserCircleIcon/>
-              </ListItemIcon>
-              <ListItemText>
-                Usuarios
-              </ListItemText>
-            </ListItem>
+            <NavLink 
+              to={Urls.User}
+              activeClassName="active"
+            >
+              <ListItem button>
+                <ListItemIcon>
+                  <SupervisedUserCircleIcon/>
+                </ListItemIcon>
+                <ListItemText>
+                  Usuarios
+                </ListItemText>
+              </ListItem>
+            </NavLink>
 
           </List>
 

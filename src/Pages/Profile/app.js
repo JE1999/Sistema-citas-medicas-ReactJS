@@ -71,7 +71,7 @@ export default function (){
                                 defaultValue="la vaca lola tiene cabeza y tiene cola"
                                 required
                             />
-                            <IconButton size="small" onClick={seePassword} color="primary" aria-label="Ver">
+                            <IconButton size="small" onClick={seePassword} aria-label="Ver">
                                 <VisibilityIcon fontSize="inherit" />
                             </IconButton>
                         </div>
@@ -119,7 +119,7 @@ export default function (){
                             <input 
                                 type="text" 
                                 className="form-control form-control-sm" 
-                                defaultValue="ata yo quiero saber"
+                                defaultValue="+1 (829) 977-4742"
                                 required
                             />
                         </div>

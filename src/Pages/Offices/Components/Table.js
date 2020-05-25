@@ -38,7 +38,7 @@ export default function () {
                     onClose={handleClose}
                     TransitionComponent={Fade}
                 >
-                    <Link to={Urls.QuotesEdit + '/1'}>
+                    <Link to={Urls.OfficesEdit + '/1'}>
                         <MenuItem onClick={handleClose}>Editar</MenuItem>
                     </Link>
                     <MenuItem onClick={handleClose}>Borrar</MenuItem>
@@ -50,15 +50,13 @@ export default function () {
     return(
         <div className="table-responsive bg-white shadow rounded-app">
             <table className="table table-hover m-0">
-                <caption className="ml-2">Lista de citas</caption>
+                <caption className="ml-2">Lista de consultorios</caption>
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Fecha</th>
-                        <th>Hora</th>
-                        <th>Paciente</th>
-                        <th>Médico</th>
-                        <th>Consultorio</th>
+                        <th>Nombre</th>
+                        <th>Ubicación</th>
+                        <th>Agregado</th>
                         <th>Estado</th>
                         <th><MoreHorizIcon/></th>
                     </tr>
@@ -67,10 +65,8 @@ export default function () {
                     <tr>
                         <th className="align-middle" scope="row">1164</th>
                         <td className="align-middle">23/05/2020</td>
-                        <td className="align-middle">09:45</td>
                         <td className="align-middle">Yohana Carolina Monsalve Castillo</td>
                         <td className="align-middle">Carlos Aguirre Salcedo</td>
-                        <td className="align-middle">Central Juarez</td>
                         <td className="align-middle">
                             <h6 className="m-0">
                                 <span className="badge badge-success">Atendido</span>
@@ -82,10 +78,8 @@ export default function () {
                     <tr>
                         <th className="align-middle" scope="row">1164</th>
                         <td className="align-middle">23/05/2020</td>
-                        <td className="align-middle">09:45</td>
                         <td className="align-middle">Yohana Carolina Monsalve Castillo</td>
                         <td className="align-middle">Carlos Aguirre Salcedo</td>
-                        <td className="align-middle">Central Juarez</td>
                         <td className="align-middle">
                             <h6 className="m-0">
                                 <span className="badge badge-warning">Asignado</span>

@@ -38,7 +38,7 @@ export default function () {
                     onClose={handleClose}
                     TransitionComponent={Fade}
                 >
-                    <Link to={Urls.QuotesEdit + '/1'}>
+                    <Link to={Urls.PatiensEdit + '/1'}>
                         <MenuItem onClick={handleClose}>Editar</MenuItem>
                     </Link>
                     <MenuItem onClick={handleClose}>Borrar</MenuItem>
@@ -50,16 +50,16 @@ export default function () {
     return(
         <div className="table-responsive bg-white shadow rounded-app">
             <table className="table table-hover m-0">
-                <caption className="ml-2">Lista de citas</caption>
+                <caption className="ml-2">Lista de pacientes</caption>
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Fecha</th>
-                        <th>Hora</th>
-                        <th>Paciente</th>
-                        <th>Médico</th>
-                        <th>Consultorio</th>
-                        <th>Estado</th>
+                        <th>Nombre completo</th>
+                        <th>Fecha de nacimiento</th>
+                        <th>Teléfono</th>
+                        <th>Dirección</th>
+                        <th>E-mail</th>
+                        <th>Genero</th>
                         <th><MoreHorizIcon/></th>
                     </tr>
                 </thead>

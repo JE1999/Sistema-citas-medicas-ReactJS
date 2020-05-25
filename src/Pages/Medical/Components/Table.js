@@ -38,7 +38,7 @@ export default function () {
                     onClose={handleClose}
                     TransitionComponent={Fade}
                 >
-                    <Link to={Urls.QuotesEdit + '/1'}>
+                    <Link to={Urls.MedicalEdit + '/1'}>
                         <MenuItem onClick={handleClose}>Editar</MenuItem>
                     </Link>
                     <MenuItem onClick={handleClose}>Borrar</MenuItem>
@@ -50,15 +50,15 @@ export default function () {
     return(
         <div className="table-responsive bg-white shadow rounded-app">
             <table className="table table-hover m-0">
-                <caption className="ml-2">Lista de citas</caption>
+                <caption className="ml-2">Lista de médicos</caption>
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Fecha</th>
-                        <th>Hora</th>
-                        <th>Paciente</th>
-                        <th>Médico</th>
-                        <th>Consultorio</th>
+                        <th>Nombre completo</th>
+                        <th>Teléfono</th>
+                        <th>Dirección</th>
+                        <th>E-mail</th>
+                        <th>Especialidad</th>
                         <th>Estado</th>
                         <th><MoreHorizIcon/></th>
                     </tr>
@@ -73,7 +73,7 @@ export default function () {
                         <td className="align-middle">Central Juarez</td>
                         <td className="align-middle">
                             <h6 className="m-0">
-                                <span className="badge badge-success">Atendido</span>
+                                <span className="badge badge-success">Activo</span>
                             </h6>
                         </td>
                         <td className="align-middle">{btnOpcions()}</td>
@@ -88,7 +88,7 @@ export default function () {
                         <td className="align-middle">Central Juarez</td>
                         <td className="align-middle">
                             <h6 className="m-0">
-                                <span className="badge badge-warning">Asignado</span>
+                                <span className="badge badge-danger">Inactivo</span>
                             </h6>
                         </td>
                         <td className="align-middle">{btnOpcions()}</td>
