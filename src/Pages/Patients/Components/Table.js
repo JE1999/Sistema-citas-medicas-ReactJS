@@ -66,31 +66,12 @@ export default function () {
                 <tbody>
                     <tr>
                         <th className="align-middle" scope="row">1164</th>
-                        <td className="align-middle">23/05/2020</td>
-                        <td className="align-middle">09:45</td>
                         <td className="align-middle">Yohana Carolina Monsalve Castillo</td>
-                        <td className="align-middle">Carlos Aguirre Salcedo</td>
-                        <td className="align-middle">Central Juarez</td>
-                        <td className="align-middle">
-                            <h6 className="m-0">
-                                <span className="badge badge-success">Atendido</span>
-                            </h6>
-                        </td>
-                        <td className="align-middle">{btnOpcions()}</td>
-                    </tr>
-
-                    <tr>
-                        <th className="align-middle" scope="row">1164</th>
-                        <td className="align-middle">23/05/2020</td>
-                        <td className="align-middle">09:45</td>
-                        <td className="align-middle">Yohana Carolina Monsalve Castillo</td>
-                        <td className="align-middle">Carlos Aguirre Salcedo</td>
-                        <td className="align-middle">Central Juarez</td>
-                        <td className="align-middle">
-                            <h6 className="m-0">
-                                <span className="badge badge-warning">Asignado</span>
-                            </h6>
-                        </td>
+                        <td className="align-middle">23/05/1998</td>
+                        <td className="align-middle">809-255-5555</td>
+                        <td className="align-middle">Villa hermosa, santo domingo</td>
+                        <td className="align-middle">yohana@gmail.com</td>
+                        <td className="align-middle">Femenino</td>
                         <td className="align-middle">{btnOpcions()}</td>
                     </tr>
                 </tbody>
