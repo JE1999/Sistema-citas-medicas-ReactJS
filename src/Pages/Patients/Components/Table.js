@@ -27,7 +27,7 @@ export default function () {
     const btnOpcions = () =>{
         return(
             <div>
-                <IconButton className="shadow-sm" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
+                <IconButton className="shadow-sm border" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
                     <MoreVertIcon/>
                 </IconButton>
                 <Menu

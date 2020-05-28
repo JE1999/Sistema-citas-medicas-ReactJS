@@ -27,7 +27,7 @@ export default function () {
     const btnOpcions = () =>{
         return(
             <div>
-                <IconButton className="shadow-sm" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
+                <IconButton className="shadow-sm border" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
                     <MoreVertIcon/>
                 </IconButton>
                 <Menu
@@ -66,11 +66,11 @@ export default function () {
                 <tbody>
                     <tr>
                         <th className="align-middle" scope="row">1164</th>
-                        <td className="align-middle">23/05/2020</td>
-                        <td className="align-middle">09:45</td>
-                        <td className="align-middle">Yohana Carolina Monsalve Castillo</td>
                         <td className="align-middle">Carlos Aguirre Salcedo</td>
-                        <td className="align-middle">Central Juarez</td>
+                        <td className="align-middle">809-255-5555</td>
+                        <td className="align-middle">Los minas, #8, detras del colmadon Juan</td>
+                        <td className="align-middle">Carlos@gmail.com</td>
+                        <td className="align-middle">Ginecologia</td>
                         <td className="align-middle">
                             <h6 className="m-0">
                                 <span className="badge badge-success">Activo</span>
@@ -80,12 +80,27 @@ export default function () {
                     </tr>
 
                     <tr>
-                        <th className="align-middle" scope="row">1164</th>
-                        <td className="align-middle">23/05/2020</td>
-                        <td className="align-middle">09:45</td>
-                        <td className="align-middle">Yohana Carolina Monsalve Castillo</td>
-                        <td className="align-middle">Carlos Aguirre Salcedo</td>
-                        <td className="align-middle">Central Juarez</td>
+                        <th className="align-middle" scope="row">1165</th>
+                        <td className="align-middle">Diana de la Vega</td>
+                        <td className="align-middle">809-255-5555</td>
+                        <td className="align-middle">Residencial los girasoles, c/3 #3</td>
+                        <td className="align-middle">Diana@gmail.com</td>
+                        <td className="align-middle">Gastroenterologa</td>
+                        <td className="align-middle">
+                            <h6 className="m-0">
+                                <span className="badge badge-success">Activo</span>
+                            </h6>
+                        </td>
+                        <td className="align-middle">{btnOpcions()}</td>
+                    </tr>
+
+                    <tr>
+                        <th className="align-middle" scope="row">1166</th>
+                        <td className="align-middle">Juana Cigarra</td>
+                        <td className="align-middle">809-255-5555</td>
+                        <td className="align-middle">El capotillo, calle principal #4 c/3</td>
+                        <td className="align-middle">Juana@gmail.com</td>
+                        <td className="align-middle">Odontologa</td>
                         <td className="align-middle">
                             <h6 className="m-0">
                                 <span className="badge badge-danger">Inactivo</span>

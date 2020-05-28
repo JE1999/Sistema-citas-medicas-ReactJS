@@ -55,82 +55,80 @@ export default function (){
                 >
                     <div className="form-row">
 
-                        <div className="form-group col-md-12 col-lg-3">
+                        <div className="form-group col-md-12 col-lg-6">
                             <TextField
                                 fullWidth 
-                                label="Fecha" 
-                                type="date"
-                                InputLabelProps={{
-                                    shrink: true,
-                                }}
+                                label="Nombre" 
+                                type="text"
                                 required
                                 variant="outlined" 
                                 size="small"
-                                name="fecha"
-                                onChange={handleChange}
-                            />
-                        </div>
-
-                        <div className="form-group col-md-12 col-lg-3">
-                            <TextField
-                                fullWidth 
-                                label="Hora" 
-                                type="time"
-                                InputLabelProps={{
-                                    shrink: true,
-                                }}
-                                required
-                                variant="outlined" 
-                                size="small"
-                                name="hora"
+                                name="nombre"
                                 onChange={handleChange}
                             />
                         </div>
 
                         <div className="form-group col-md-12 col-lg-6">
-                            <Autocomplete
-                                fullWidth
-                                id="combo-box-demo"
-                                options={top100Films}
-                                getOptionLabel={(option) => option.title}
-                                onChange={(e,v) => setDataSend({...dataSend, paciente : v.title})}
-                                renderInput={(params) => <TextField {...params} label="Paciente" variant="outlined" size="small" required />}
+                            <TextField
+                                fullWidth 
+                                label="Apellido" 
+                                type="text"
+                                required
+                                variant="outlined" 
+                                size="small"
+                                name="apellido"
+                                onChange={handleChange}
                             />
                         </div>
 
-                        <div className="form-group col-md-12 col-lg-6">
-                            <Autocomplete
-                                fullWidth
-                                id="combo-box-demo"
-                                options={top100Films}
-                                getOptionLabel={(option) => option.title}
-                                onChange={(e,v) => setDataSend({...dataSend, medico : v.title})}
-                                renderInput={(params) => <TextField {...params} label="Médico" variant="outlined" size="small" required />}
+                        <div className="form-group col-md-12 col-lg-4">
+                            <TextField
+                                fullWidth 
+                                label="Teléfono" 
+                                type="text"
+                                required
+                                variant="outlined" 
+                                size="small"
+                                name="telefono"
+                                onChange={handleChange}
                             />
                         </div>
 
-                        <div className="form-group col-md-12 col-lg-6">
+                        <div className="form-group col-md-12 col-lg-4">
+                            <TextField
+                                fullWidth 
+                                label="E-mail" 
+                                type="email"
+                                required
+                                variant="outlined" 
+                                size="small"
+                                name="email"
+                                onChange={handleChange}
+                            />
+                        </div>
+
+                        <div className="form-group col-md-12 col-lg-4">
                             <Autocomplete
                                 fullWidth
                                 id="combo-box-demo"
                                 options={top100Films}
                                 getOptionLabel={(option) => option.title}
-                                onChange={(e,v) => setDataSend({...dataSend, consultorio : v.title})}
-                                renderInput={(params) => <TextField {...params} label="Consultorio" variant="outlined" size="small" required />}
+                                onChange={(e,v) => setDataSend({...dataSend, especialidad : v.title})}
+                                renderInput={(params) => <TextField {...params} label="Especialidad" variant="outlined" size="small" required />}
                             />
                         </div>
 
                         <div className="form-group col-md-12">
                             <TextField
                                 fullWidth 
-                                label="Observación" 
+                                label="Dirección" 
                                 type="text"
                                 multiline
                                 rows={2}
                                 required
                                 variant="outlined" 
                                 size="small"
-                                name="observacion"
+                                name="direccion"
                                 onChange={handleChange}
                             />
                         </div>

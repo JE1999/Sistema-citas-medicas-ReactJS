@@ -27,7 +27,7 @@ export default function () {
     const btnOpcions = () =>{
         return(
             <div>
-                <IconButton className="shadow-sm" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
+                <IconButton className="shadow-sm border" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
                     <MoreVertIcon/>
                 </IconButton>
                 <Menu
@@ -66,29 +66,14 @@ export default function () {
                 <tbody>
                     <tr>
                         <th className="align-middle" scope="row">1164</th>
-                        <td className="align-middle">23/05/2020</td>
-                        <td className="align-middle">09:45</td>
                         <td className="align-middle">Yohana Carolina Monsalve Castillo</td>
-                        <td className="align-middle">Carlos Aguirre Salcedo</td>
-                        <td className="align-middle">Central Juarez</td>
+                        <td className="align-middle">rochyRD</td>
+                        <td className="align-middle">Caro@gmail.com</td>
+                        <td className="align-middle">Administrador</td>
+                        <td className="align-middle">05/05/2020</td>
                         <td className="align-middle">
                             <h6 className="m-0">
-                                <span className="badge badge-success">Atendido</span>
-                            </h6>
-                        </td>
-                        <td className="align-middle">{btnOpcions()}</td>
-                    </tr>
-
-                    <tr>
-                        <th className="align-middle" scope="row">1164</th>
-                        <td className="align-middle">23/05/2020</td>
-                        <td className="align-middle">09:45</td>
-                        <td className="align-middle">Yohana Carolina Monsalve Castillo</td>
-                        <td className="align-middle">Carlos Aguirre Salcedo</td>
-                        <td className="align-middle">Central Juarez</td>
-                        <td className="align-middle">
-                            <h6 className="m-0">
-                                <span className="badge badge-warning">Asignado</span>
+                                <span className="badge badge-success">Activo</span>
                             </h6>
                         </td>
                         <td className="align-middle">{btnOpcions()}</td>

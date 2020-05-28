@@ -27,7 +27,7 @@ export default function () {
     const btnOpcions = () =>{
         return(
             <div>
-                <IconButton className="shadow-sm" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
+                <IconButton className="shadow-sm border" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
                     <MoreVertIcon/>
                 </IconButton>
                 <Menu
@@ -80,12 +80,27 @@ export default function () {
                     </tr>
 
                     <tr>
-                        <th className="align-middle" scope="row">1164</th>
-                        <td className="align-middle">23/05/2020</td>
-                        <td className="align-middle">09:45</td>
-                        <td className="align-middle">Yohana Carolina Monsalve Castillo</td>
-                        <td className="align-middle">Carlos Aguirre Salcedo</td>
-                        <td className="align-middle">Central Juarez</td>
+                        <th className="align-middle" scope="row">1165</th>
+                        <td className="align-middle">05/05/2020</td>
+                        <td className="align-middle">11:25</td>
+                        <td className="align-middle">Jose Candelario tres pastines</td>
+                        <td className="align-middle">Diente de Oro</td>
+                        <td className="align-middle">Clinica Coromina</td>
+                        <td className="align-middle">
+                            <h6 className="m-0">
+                                <span className="badge badge-warning">Asignado</span>
+                            </h6>
+                        </td>
+                        <td className="align-middle">{btnOpcions()}</td>
+                    </tr>
+
+                    <tr>
+                        <th className="align-middle" scope="row">1166</th>
+                        <td className="align-middle">21/05/2020</td>
+                        <td className="align-middle">18:30</td>
+                        <td className="align-middle">David Flores Guzman</td>
+                        <td className="align-middle">Elizabeth Rosalía</td>
+                        <td className="align-middle">Dario Contreras</td>
                         <td className="align-middle">
                             <h6 className="m-0">
                                 <span className="badge badge-warning">Asignado</span>

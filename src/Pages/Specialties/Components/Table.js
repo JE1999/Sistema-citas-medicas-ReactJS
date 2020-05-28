@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 //Components
-import Urls from '../../../Routes/Urls';
+// import Urls from '../../../Routes/Urls';
 
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
@@ -27,7 +26,7 @@ export default function () {
     const btnOpcions = () =>{
         return(
             <div>
-                <IconButton className="shadow-sm" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
+                <IconButton className="shadow-sm border" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
                     <MoreVertIcon/>
                 </IconButton>
                 <Menu
@@ -38,9 +37,9 @@ export default function () {
                     onClose={handleClose}
                     TransitionComponent={Fade}
                 >
-                    <Link to={Urls.SpecialtiesEdit + '/1'}>
+                    {/* <Link to={Urls.SpecialtiesEdit + '/1'}>
                         <MenuItem onClick={handleClose}>Editar</MenuItem>
-                    </Link>
+                    </Link> */}
                     <MenuItem onClick={handleClose}>Borrar</MenuItem>
                 </Menu>
             </div>
@@ -55,33 +54,13 @@ export default function () {
                     <tr>
                         <th>#</th>
                         <th>Especialidad</th>
-                        <th>Agregado</th>
-                        <th>Estado</th>
                         <th><MoreHorizIcon/></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th className="align-middle" scope="row">1164</th>
-                        <td className="align-middle">23/05/2020</td>
-                        <td className="align-middle">09:45</td>
-                        <td className="align-middle">
-                            <h6 className="m-0">
-                                <span className="badge badge-success">Atendido</span>
-                            </h6>
-                        </td>
-                        <td className="align-middle">{btnOpcions()}</td>
-                    </tr>
-
-                    <tr>
-                        <th className="align-middle" scope="row">1164</th>
-                        <td className="align-middle">23/05/2020</td>
-                        <td className="align-middle">09:45</td>
-                        <td className="align-middle">
-                            <h6 className="m-0">
-                                <span className="badge badge-warning">Asignado</span>
-                            </h6>
-                        </td>
+                        <td className="align-middle">Odontologia</td>
                         <td className="align-middle">{btnOpcions()}</td>
                     </tr>
                 </tbody>

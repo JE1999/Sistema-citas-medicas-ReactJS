@@ -150,7 +150,7 @@ export default function (){
                                 <Select
                                     labelId="demo-simple-select-outlined-label"
                                     id="demo-simple-select-outlined"
-                                    label="estado"
+                                    label="Estado"
                                     name="estado"
                                     onChange={handleChange}
                                     defaultValue="Asignado"
